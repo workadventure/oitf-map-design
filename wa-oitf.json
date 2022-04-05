@@ -709,7 +709,7 @@
                                         {
                                          "name":"openWebsite",
                                          "type":"string",
-                                         "value":"{{{ urlDocument }}}"
+                                         "value":"{{{ domain }}}{{{ urlDocument }}}"
                                         }, 
                                         {
                                          "name":"openWebsitePolicy",
@@ -763,7 +763,7 @@
                                         {
                                          "name":"openWebsite",
                                          "type":"string",
-                                         "value":"{{{ urlVideo }}}"
+                                         "value":"{{{ domain }}}{{{ urlVideo }}}"
                                         }, 
                                         {
                                          "name":"openWebsitePolicy",
@@ -827,7 +827,7 @@
                                         {
                                          "name":"openWebsite",
                                          "type":"string",
-                                         "value":"{{{ urlPanneau }}}"
+                                         "value":"{{{ domain }}}{{{ urlPanneau }}}"
                                         }, 
                                         {
                                          "name":"openWebsitePolicy",
@@ -1922,7 +1922,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"https:\/\/workadventu.re\/"
+                         "value":"\/account\/search\/videos\/wa"
                         }, 
                         {
                          "name":"label",
@@ -1937,7 +1937,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"admin"
+                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -1955,7 +1955,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"https:\/\/workadventu.re\/"
+                         "value":"\/account\/search\/conference_choice\/wa"
                         }, 
                         {
                          "name":"label",
@@ -1970,7 +1970,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"admin"
+                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2003,7 +2003,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"admin"
+                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2021,7 +2021,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"https:\/\/workadventu.re\/"
+                         "value":"\/account\/search\/conference_choice\/wa"
                         }, 
                         {
                          "name":"label",
@@ -2036,7 +2036,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"admin"
+                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2044,8 +2044,47 @@
                  "width":0,
                  "x":496,
                  "y":847
+                }, 
+                {
+                 "height":0,
+                 "id":14,
+                 "name":"domain",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"https:\/\/premium.admin.onceintheflow.com"
+                        }, 
+                        {
+                         "name":"label",
+                         "type":"string",
+                         "value":"Domain serveur"
+                        }, 
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"writableBy",
+                         "type":"string",
+                         "value":"editor"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":27,
+                 "y":32
                 }],
          "opacity":1,
+         "properties":[
+                {
+                 "name":"tag",
+                 "type":"string",
+                 "value":"editor"
+                }],
          "type":"objectgroup",
          "visible":true,
          "x":0,
@@ -2363,7 +2402,7 @@
          "y":0
         }],
  "nextlayerid":157,
- "nextobjectid":14,
+ "nextobjectid":15,
  "orientation":"orthogonal",
  "properties":[
         {
