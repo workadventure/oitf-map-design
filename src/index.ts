@@ -31,5 +31,28 @@ function toggleDoor() {
     }
 }
 
-closeDoor();
-WA.room.onEnterLayer('doorZone').subscribe(toggleDoor);
+let domain = 'https://premium.admin.onceintheflow.com'
+const initDomain = () => {
+    for(const tag of WA.player.tags){
+        if(tag.indexOf('https://') !== -1){
+            domain = tag;
+            break;
+        }
+    }
+}
+
+WA.onInit().then( () => {
+    //get domain
+    initDomain();
+
+    //define the domain
+    if(!WA.state.hasVariable('domain') && WA.state.loadVariable('domain') !== domain){
+        WA.state.saveVariable('domain', domain);
+    }
+
+    //close the door
+    closeDoor();
+
+    //subscribe to open the door if user is premium
+    WA.room.onEnterLayer('doorZone').subscribe(toggleDoor);
+});
