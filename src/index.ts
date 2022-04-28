@@ -3,7 +3,53 @@
 import {bootstrapExtra} from "@workadventure/scripting-api-extra";
 
 // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure.
-bootstrapExtra().catch(e => console.error(e));
+bootstrapExtra().then(() => {
+    console.info('Init WA OITF');
+
+    let userDomain: string = '';
+    WA.player.tags.forEach((e: string) => {
+        console.log(e);
+        if(e.match(/http(?:s)?:\/\/(?:[\w-]+\.)*([\w-]{1,63})(?:\.(?:\w{3}|\w{2,10}))(?:$|\/)/i) != null){
+            userDomain = e;
+        }
+    });
+    //delete '/' caractere if exist
+    if(userDomain.substring(userDomain.length -1, userDomain.length -1) === '/'){
+        userDomain = userDomain.substring(0, userDomain.length -1);
+    }
+    WA.state.saveVariable('domain', userDomain);
+    console.log('domain', WA.state.loadVariable('domain'));
+
+    const urlVideo = WA.state.loadVariable('urlVideo');
+    if(urlVideo != null){
+        WA.state.saveVariable('urlVideo', `${urlVideo}/${WA.player.id}`);
+    }
+    console.log('urlVideo', WA.state.loadVariable('urlVideo'));
+
+    const urlDocument = WA.state.loadVariable('urlDocument');
+    if(urlDocument != null){
+        WA.state.saveVariable('urlDocument', `${urlDocument}/${WA.player.id}`);
+    }
+    console.log('urlDocument', WA.state.loadVariable('urlDocument'));
+
+    const chapitreChoice = WA.state.loadVariable('chapitreChoice');
+    if(chapitreChoice != null){
+        WA.state.saveVariable('chapitreChoice', `${chapitreChoice}/${WA.player.id}`);
+    }
+    console.log('chapitreChoice', WA.state.loadVariable('chapitreChoice'));
+
+    const projectChoice = WA.state.loadVariable('projectChoice');
+    if(projectChoice != null){
+        WA.state.saveVariable('projectChoice', `${projectChoice}/${WA.player.id}`);
+    }
+    console.log('projectChoice', WA.state.loadVariable('projectChoice'));
+
+    const eventChoice = WA.state.loadVariable('eventChoice');
+    if(eventChoice != null){
+        WA.state.saveVariable('eventChoice', `${eventChoice}/${WA.player.id}`);
+    }
+    console.log('eventChoice', WA.state.loadVariable('eventChoice'));
+}).catch(e => console.error(e));
 
 /* #Manage premium door */
 
