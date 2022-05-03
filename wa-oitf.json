@@ -798,17 +798,6 @@
          "id":158,
          "name":"openWebsitEexitChapitreToCerclePublic",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ projectChoice }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":120,
@@ -852,17 +841,6 @@
          "id":157,
          "name":"openWebsitEexitChapitreToCerclePrivate",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ projectChoice }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":120,
@@ -906,17 +884,6 @@
          "id":159,
          "name":"openWebsiteExitToEvent",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ eventChoice }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":120,
@@ -960,17 +927,6 @@
          "id":137,
          "name":"Video",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ urlVideo }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":120,
@@ -1014,17 +970,6 @@
          "id":145,
          "name":"urlPanneau",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ chapitreChoice }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":120,
@@ -1068,17 +1013,6 @@
          "id":146,
          "name":"urlPong",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ urlPong }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":120,
@@ -1122,17 +1056,6 @@
          "id":136,
          "name":"Document",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ urlDocument }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":120,

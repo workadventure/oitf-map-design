@@ -77,45 +77,45 @@ WA.onInit().then( () => {
 
     const urlVideo = WA.state.loadVariable('urlVideo');
     if(urlVideo != null){
-        WA.room.setProperty(VIDEO_LAYER, "openWebsite", `${userDomain}${urlVideo}/${WA.player.id}`);
-        console.log(VIDEO_LAYER, `${userDomain}${urlVideo}/${WA.player.id}`);
+        const url = `${userDomain}${urlVideo}/${WA.player.id}`;
+        lissenLayer(VIDEO_LAYER, url);
     }
 
     const urlDocument = WA.state.loadVariable('urlDocument');
     if(urlDocument != null){
-        WA.room.setProperty(DOCUMENT_LAYER, "openWebsite", `${userDomain}${urlDocument}/${WA.player.id}`);
-        console.log(DOCUMENT_LAYER, `${userDomain}${urlVideo}/${WA.player.id}`);
+        const url = `${userDomain}${urlDocument}/${WA.player.id}`;
+        lissenLayer(DOCUMENT_LAYER, url);
     }
 
     const chapitreChoice = WA.state.loadVariable('chapitreChoice');
     if(chapitreChoice != null){
-        WA.room.setProperty(PANNEAU_LAYER, "openWebsite", `${userDomain}${chapitreChoice}/${WA.player.id}`);
-        WA.room.setProperty(EXIT_CERCLE_TO_CHAPITRE_LAYER_PUBLIC, "openWebsite", `${userDomain}${chapitreChoice}/${WA.player.id}`);
-        WA.room.setProperty(EXIT_CERCLE_TO_CHAPITRE_LAYER_PRIVATE, "openWebsite", `${userDomain}${chapitreChoice}/${WA.player.id}`);
-        WA.room.setProperty(EXIT_SESSION_TO_CHAPITRE_LAYER_PRIVATE, "openWebsite", `${userDomain}${chapitreChoice}/${WA.player.id}`);
-        console.log(PANNEAU_LAYER, `${userDomain}${chapitreChoice}/${WA.player.id}`);
-        console.log(EXIT_CERCLE_TO_CHAPITRE_LAYER_PUBLIC, `${userDomain}${chapitreChoice}/${WA.player.id}`);
-        console.log(EXIT_CERCLE_TO_CHAPITRE_LAYER_PRIVATE, `${userDomain}${chapitreChoice}/${WA.player.id}`);
-        console.log(EXIT_CERCLE_TO_CHAPITRE_LAYER_PRIVATE, `${userDomain}${chapitreChoice}/${WA.player.id}`);
+        const url = `${userDomain}${chapitreChoice}/${WA.player.id}`;
+        lissenLayer(PANNEAU_LAYER, url);
+        lissenLayer(EXIT_CERCLE_TO_CHAPITRE_LAYER_PUBLIC, url);
+        lissenLayer(EXIT_CERCLE_TO_CHAPITRE_LAYER_PRIVATE, url);
+        lissenLayer(EXIT_SESSION_TO_CHAPITRE_LAYER_PRIVATE, url);
     }
 
     const projectChoice = WA.state.loadVariable('projectChoice');
     if(projectChoice != null){
-        WA.room.setProperty(EXIT_CHAPITRE_TO_CERCLE_LAYER_PUBLIC, "openWebsite", `${userDomain}${projectChoice}/${WA.player.id}`);
-        WA.room.setProperty(EXIT_CHAPITRE_TO_CERCLE_LAYER_PRIVATE, "openWebsite", `${userDomain}${projectChoice}/${WA.player.id}`);
-        WA.room.setProperty(EXIT_SESSION_TO_CERCLE_LAYER_PRIVATE, "openWebsite", `${userDomain}${projectChoice}/${WA.player.id}`);
-        console.log(EXIT_CHAPITRE_TO_CERCLE_LAYER_PUBLIC, `${userDomain}${projectChoice}/${WA.player.id}`);
-        console.log(EXIT_CHAPITRE_TO_CERCLE_LAYER_PRIVATE, `${userDomain}${projectChoice}/${WA.player.id}`);
-        console.log(EXIT_SESSION_TO_CHAPITRE_LAYER_PRIVATE, `${userDomain}${projectChoice}/${WA.player.id}`);
+        const url = `${userDomain}${projectChoice}/${WA.player.id}`;
+        lissenLayer(EXIT_CHAPITRE_TO_CERCLE_LAYER_PUBLIC, url);
+        lissenLayer(EXIT_CHAPITRE_TO_CERCLE_LAYER_PRIVATE, url);
+        lissenLayer(EXIT_SESSION_TO_CERCLE_LAYER_PRIVATE, url);
     }
 
     const eventChoice = WA.state.loadVariable('eventChoice');
     if(eventChoice != null){
-        WA.room.setProperty(EXIST_TO_EVENT_LAYER, "openWebsite", `${userDomain}${eventChoice}/${WA.player.id}`);
-        WA.room.setProperty(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, "openWebsite", `${userDomain}${eventChoice}/${WA.player.id}`);
-        WA.room.setProperty(EXIT_CERCLE_TO_SESSION_LAYER_PUBLIC, "openWebsite", `${userDomain}${eventChoice}/${WA.player.id}`);
-        console.log(EXIST_TO_EVENT_LAYER, `${userDomain}${eventChoice}/${WA.player.id}`);
-        console.log(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, `${userDomain}${eventChoice}/${WA.player.id}`);
-        console.log(EXIT_CERCLE_TO_SESSION_LAYER_PUBLIC, `${userDomain}${eventChoice}/${WA.player.id}`);
+        const url = `${userDomain}${eventChoice}/${WA.player.id}`;
+        lissenLayer(EXIST_TO_EVENT_LAYER, url);
+        lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, url);
+        lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PUBLIC, url);
     }
 });
+
+function lissenLayer(layer: string, url: string){
+    WA.room.onEnterLayer(layer).subscribe(() => {
+        WA.nav.openCoWebSite(url, true, 'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture')
+    });
+    WA.room.onLeaveLayer(layer).subscribe(() => WA.nav.closeCoWebSite());
+}

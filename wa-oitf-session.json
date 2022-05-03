@@ -719,17 +719,6 @@
          "id":157,
          "name":"openWebsitEexitSessionToChapitrePrivate",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ chapitreChoice }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":59,
@@ -773,17 +762,6 @@
          "id":165,
          "name":"openWebsitEexitSessionToCerclePrivate",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ projectChoice }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":59,
@@ -827,17 +805,6 @@
          "id":158,
          "name":"Document",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ urlDocument }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":59,
@@ -881,17 +848,6 @@
          "id":159,
          "name":"Video",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ urlVideo }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":59,
