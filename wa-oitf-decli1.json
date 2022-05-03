@@ -184,13 +184,13 @@
                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                          "height":32,
                          "id":155,
-                         "name":"openWebsiteExitFloorPrivate",
+                         "name":"openWebsitEexitChapitreToCerclePrivate",
                          "opacity":1,
                          "properties":[
                                 {
                                  "name":"openWebsite",
                                  "type":"string",
-                                 "value":"{{{ domain }}}{{{ urlProject }}}"
+                                 "value":"{{{ domain }}}{{{ projectChoice }}}"
                                 }, 
                                 {
                                  "name":"openWebsitePolicy",
@@ -287,13 +287,13 @@
                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                          "height":32,
                          "id":154,
-                         "name":"openWebsiteExitFloorPublic",
+                         "name":"openWebsitEexitChapitreToCerclePublic",
                          "opacity":1,
                          "properties":[
                                 {
                                  "name":"openWebsite",
                                  "type":"string",
-                                 "value":"{{{ domain }}}{{{ urlProject }}}"
+                                 "value":"{{{ domain }}}{{{ projectChoice }}}"
                                 }, 
                                 {
                                  "name":"openWebsitePolicy",
@@ -881,7 +881,7 @@
                                         {
                                          "name":"openWebsite",
                                          "type":"string",
-                                         "value":"{{{ domain }}}{{{ urlPanneau }}}"
+                                         "value":"{{{ domain }}}{{{ chapitreChoice }}}"
                                         }, 
                                         {
                                          "name":"openWebsitePolicy",
@@ -2009,7 +2009,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/account\/search\/conference_choice\/wa"
+                         "value":"\/wa\/search\/conference_choice"
                         }, 
                         {
                          "name":"label",
@@ -2042,7 +2042,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/account\/search\/videos\/wa"
+                         "value":"\/wa\/search\/videos"
                         }, 
                         {
                          "name":"label",
@@ -2070,7 +2070,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/account\/search\/documents\/wa"
+                         "value":"\/wa\/search\/documents"
                         }, 
                         {
                          "name":"label",
@@ -2131,7 +2131,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/account\/search\/projects\/wa"
+                         "value":"\/wa\/search\/projects"
                         }, 
                         {
                          "name":"label",
@@ -2164,7 +2164,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/account\/search\/projects\/wa"
+                         "value":"\/wa\/search\/projects"
                         }, 
                         {
                          "name":"label",
@@ -2197,7 +2197,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/account\/search\/conference_choice\/wa"
+                         "value":"\/wa\/search\/conference_choice"
                         }, 
                         {
                          "name":"label",
@@ -2230,7 +2230,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/account\/search\/events\/wa"
+                         "value":"\/wa\/search\/events"
                         }, 
                         {
                          "name":"label",
