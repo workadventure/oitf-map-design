@@ -1991,7 +1991,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"editor"
+                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -1999,39 +1999,6 @@
                  "width":0,
                  "x":437,
                  "y":677
-                }, 
-                {
-                 "height":0,
-                 "id":11,
-                 "name":"urlPanneau",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"\/wa\/search\/conference_choice"
-                        }, 
-                        {
-                         "name":"label",
-                         "type":"string",
-                         "value":"Lien du panneau d'information"
-                        }, 
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"editor"
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":498,
-                 "y":828
                 }, 
                 {
                  "height":0,
@@ -2053,6 +2020,11 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"writableBy",
+                         "type":"string",
+                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2081,6 +2053,11 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"writableBy",
+                         "type":"string",
+                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2113,7 +2090,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"editor"
+                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2146,7 +2123,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"editor"
+                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2179,7 +2156,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"editor"
+                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2212,7 +2189,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"editor"
+                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2245,7 +2222,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"editor"
+                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
