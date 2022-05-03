@@ -4,6 +4,8 @@ import {bootstrapExtra} from "@workadventure/scripting-api-extra";
 
 // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure.
 bootstrapExtra().then(() => {
+
+    //TODO update zone of document and not variable shared
     console.info('Init WA OITF');
 
     let userDomain: string = '';
