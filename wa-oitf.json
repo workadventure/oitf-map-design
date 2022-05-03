@@ -195,7 +195,7 @@
                                 {
                                  "name":"openWebsite",
                                  "type":"string",
-                                 "value":"{{{ domain }}}{{{ urlProject }}}"
+                                 "value":"{{{ domain }}}{{{ projectChoice }}}"
                                 }, 
                                 {
                                  "name":"openWebsitePolicy",
@@ -303,7 +303,7 @@
                                 {
                                  "name":"openWebsite",
                                  "type":"string",
-                                 "value":"{{{ domain }}}{{{ urlProject }}}"
+                                 "value":"{{{ domain }}}{{{ projectChoice }}}"
                                 }, 
                                 {
                                  "name":"openWebsitePolicy",
@@ -989,7 +989,7 @@
                                         {
                                          "name":"openWebsite",
                                          "type":"string",
-                                         "value":"{{{ domain }}}{{{ urlPanneau }}}"
+                                         "value":"{{{ domain }}}{{{ chapitreChoice }}}"
                                         }, 
                                         {
                                          "name":"openWebsitePolicy",
@@ -2173,39 +2173,6 @@
                  "width":0,
                  "x":434,
                  "y":724
-                }, 
-                {
-                 "height":0,
-                 "id":13,
-                 "name":"urlPanneau",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"\/wa\/search\/conference_choice"
-                        }, 
-                        {
-                         "name":"label",
-                         "type":"string",
-                         "value":"Lien du panneau d'information"
-                        }, 
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"premium"
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":496,
-                 "y":847
                 }, 
                 {
                  "height":0,
