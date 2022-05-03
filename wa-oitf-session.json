@@ -86,7 +86,7 @@
                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                          "height":32,
                          "id":157,
-                         "name":"openWebsiteExitAscenceur",
+                         "name":"openWebsitEexitSessionToChapitrePrivate",
                          "opacity":1,
                          "properties":[
                                 {
@@ -189,7 +189,7 @@
                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                          "height":32,
                          "id":165,
-                         "name":"onpenWebsiteExitPrivate",
+                         "name":"openWebsitEexitSessionToCerclePrivate",
                          "opacity":1,
                          "properties":[
                                 {
@@ -729,7 +729,7 @@
                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                          "height":32,
                          "id":158,
-                         "name":"urlPrivateBiblio",
+                         "name":"Document",
                          "opacity":1,
                          "properties":[
                                 {
@@ -783,7 +783,7 @@
                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                          "height":32,
                          "id":159,
-                         "name":"urlPrivateVideo",
+                         "name":"Video",
                          "opacity":1,
                          "properties":[
                                 {
@@ -1737,7 +1737,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"https:\/\/workadventu.re\/"
+                         "value":"\/wa\/search\/videos"
                         }, 
                         {
                          "name":"label",
@@ -1770,7 +1770,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"https:\/\/workadventu.re\/"
+                         "value":"\/wa\/search\/documents"
                         }, 
                         {
                          "name":"label",
@@ -1836,7 +1836,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/account\/search\/projects\/wa"
+                         "value":"\/wa\/search\/projects\/wa"
                         }, 
                         {
                          "name":"label",
@@ -1869,7 +1869,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/account\/search\/conference_choice\/wa"
+                         "value":"\/wa\/search\/conference_choice"
                         }, 
                         {
                          "name":"label",
@@ -1892,39 +1892,6 @@
                  "width":0,
                  "x":107,
                  "y":28
-                }, 
-                {
-                 "height":0,
-                 "id":22,
-                 "name":"eventChoice",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"\/account\/search\/events\/wa"
-                        }, 
-                        {
-                         "name":"label",
-                         "type":"string",
-                         "value":"Lien des events des utilisateurs"
-                        }, 
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"editor"
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":159,
-                 "y":33
                 }],
          "opacity":1,
          "properties":[
