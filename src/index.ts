@@ -54,7 +54,12 @@ WA.onInit().then( () => {
 
     console.info('Init WA OITF');
 
+    //define the domain
     let userDomain: string = '';
+    if(!WA.state.hasVariable('domain')){
+        userDomain = (WA.state.loadVariable('domain') as string);
+    }
+    
     WA.player.tags.forEach((e: string) => {
         console.log(e);
         if(e.match(/http(?:s)?:\/\/(?:[\w-]+\.)*([\w-]{1,63})(?:\.(?:\w{3}|\w{2,10}))(?:$|\/)/i) != null){
@@ -62,16 +67,13 @@ WA.onInit().then( () => {
         }
     });
 
-    //define the domain
-    if(!WA.state.hasVariable('domain') && WA.state.loadVariable('domain') !== userDomain){
-        WA.state.saveVariable('domain', userDomain);
+    if(userDomain !== ''){
+        //delete '/' caractere if exist
+        if(userDomain.substring(userDomain.length -1, userDomain.length -1) === '/'){
+            userDomain = userDomain.substring(0, userDomain.length -1);
+        }
     }
-
-    //delete '/' caractere if exist
-    if(userDomain.substring(userDomain.length -1, userDomain.length -1) === '/'){
-        userDomain = userDomain.substring(0, userDomain.length -1);
-    }
-    console.log('domain', WA.state.loadVariable('domain'));
+    console.log('domain', userDomain);
 
     const urlVideo = WA.state.loadVariable('urlVideo');
     if(urlVideo != null){
