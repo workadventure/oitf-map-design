@@ -56,7 +56,7 @@ WA.onInit().then( () => {
 
     //define the domain
     let userDomain: string = '';
-    if(!WA.state.hasVariable('domain')){
+    if(WA.state.hasVariable('domain')){
         userDomain = (WA.state.loadVariable('domain') as string);
     }
     
@@ -73,7 +73,7 @@ WA.onInit().then( () => {
             userDomain = userDomain.substring(0, userDomain.length -1);
         }
     }
-    console.log('domain', userDomain);
+    console.log('userDomain', userDomain);
 
     const urlVideo = WA.state.loadVariable('urlVideo');
     if(urlVideo != null){
@@ -111,7 +111,6 @@ WA.onInit().then( () => {
 
     const eventChoice = WA.state.loadVariable('eventChoice');
     if(eventChoice != null){
-        WA.state.saveVariable('eventChoice', `${eventChoice}/${WA.player.id}`);
         WA.room.setProperty(EXIST_TO_EVENT_LAYER, "openWebsite", `${userDomain}${eventChoice}/${WA.player.id}`);
         WA.room.setProperty(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, "openWebsite", `${userDomain}${eventChoice}/${WA.player.id}`);
         WA.room.setProperty(EXIT_CERCLE_TO_SESSION_LAYER_PUBLIC, "openWebsite", `${userDomain}${eventChoice}/${WA.player.id}`);
