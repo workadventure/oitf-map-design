@@ -2095,11 +2095,6 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2128,11 +2123,6 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2161,11 +2151,6 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2194,11 +2179,6 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2227,11 +2207,6 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2260,11 +2235,6 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -2293,11 +2263,6 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"editor"
                         }],
                  "rotation":0,
                  "type":"variable",
