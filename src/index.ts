@@ -119,3 +119,15 @@ function lissenLayer(layer: string, url: string){
     });
     WA.room.onLeaveLayer(layer).subscribe(() => WA.nav.closeCoWebSite());
 }
+
+window.addEventListener("message", receiveMessage, false);
+function receiveMessage(event: MessageEvent)
+{
+    //if (event.origin !== "http://example.org:8080")  return;
+
+    const data = event.data;
+    if (data.event === 'access_wa_map') {
+        console.log(data.url);
+        window.location = data.url;
+    }
+}
