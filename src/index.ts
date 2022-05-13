@@ -35,7 +35,7 @@ const isPremium = () => {
     return WA.player.tags.includes('premium') || WA.player.tags.includes('Premium') 
     || WA.player.tags.includes('PREMIUM') || WA.player.tags.includes('editor');
 }
-function toggleDoor() {
+const toggleDoor = () => {
     console.log('isPremium()', isPremium());
     if(isPremium()){
         openDoor();
@@ -113,21 +113,13 @@ WA.onInit().then( () => {
     }
 });
 
-function lissenLayer(layer: string, url: string){
+const lissenLayer = (layer: string, url: string) => {
     WA.room.onEnterLayer(layer).subscribe(() => {
-        WA.nav.openCoWebSite(url, true, 'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture')
+        WA.nav.openCoWebSite(
+            /*'https://premium.admin.onceintheflow.com/wa/search/conference_choice/f02d5d65-b78e-41d7-91f5-6c4f6d2e588a'*/
+            'https://workadventure.github.io/oitf-map-design/src/test/test-iframe-message-goToPage.html', 
+            true, 
+            'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; midi;')
     });
     WA.room.onLeaveLayer(layer).subscribe(() => WA.nav.closeCoWebSite());
-}
-
-window.addEventListener("message", receiveMessage, false);
-function receiveMessage(event: MessageEvent)
-{
-    //if (event.origin !== "http://example.org:8080")  return;
-
-    const data = event.data;
-    if (data.event === 'access_wa_map') {
-        console.log(data.url);
-        window.location = data.url;
-    }
 }
