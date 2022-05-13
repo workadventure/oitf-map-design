@@ -35,7 +35,7 @@ const isPremium = () => {
     return WA.player.tags.includes('premium') || WA.player.tags.includes('Premium') 
     || WA.player.tags.includes('PREMIUM') || WA.player.tags.includes('editor');
 }
-function toggleDoor() {
+const toggleDoor = () => {
     console.log('isPremium()', isPremium());
     if(isPremium()){
         openDoor();
@@ -111,20 +111,24 @@ WA.onInit().then( () => {
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, url);
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PUBLIC, url);
     }
+
+    console.log('addEventListener => message', receiveMessage);
+    window.addEventListener("message", (event: MessageEvent) => {
+        console.log('addEventListener => message => event', event);
+        receiveMessage(event);
+    }, false);
 });
 
-function lissenLayer(layer: string, url: string){
+const lissenLayer = (layer: string, url: string) => {
     WA.room.onEnterLayer(layer).subscribe(() => {
         WA.nav.openCoWebSite(url, true, 'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture')
     });
     WA.room.onLeaveLayer(layer).subscribe(() => WA.nav.closeCoWebSite());
 }
 
-window.addEventListener("message", receiveMessage, false);
-function receiveMessage(event: MessageEvent)
-{
+const receiveMessage = (event: MessageEvent) => {
     //if (event.origin !== "http://example.org:8080")  return;
-
+    console.log('receiveMessage => event', event);
     const data = event.data;
     if (data.event === 'access_wa_map') {
         console.log(data.url);
