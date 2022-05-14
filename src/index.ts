@@ -123,7 +123,7 @@ const lissenLayer = (layer: string, url: string) => {
     WA.room.onEnterLayer(layer).subscribe(() => {
         WA.nav.openCoWebSite(
             /*'https://premium.admin.onceintheflow.com/wa/search/conference_choice/f02d5d65-b78e-41d7-91f5-6c4f6d2e588a'*/
-            'workadventure.github.io/oitf-map-design/src/test/test-iframe-message-goToPage.html', 
+            'https://workadventure.github.io/oitf-map-design/src/test/test-iframe-message-goToPage.html', 
             true, 
             'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; midi;')
     });
