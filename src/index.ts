@@ -121,7 +121,10 @@ WA.onInit().then( () => {
 
 const lissenLayer = (layer: string, url: string) => {
     WA.room.onEnterLayer(layer).subscribe(() => {
-        WA.nav.openCoWebSite(url, true, 'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture')
+        WA.nav.openCoWebSite(
+            'https://premium.admin.onceintheflow.com/wa/search/conference_choice/f02d5d65-b78e-41d7-91f5-6c4f6d2e588a', 
+            true, 
+            'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; midi;')
     });
     WA.room.onLeaveLayer(layer).subscribe(() => WA.nav.closeCoWebSite());
 }
