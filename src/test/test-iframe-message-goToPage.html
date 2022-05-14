@@ -1,0 +1,9 @@
+<script>
+    window.addEventListener("load", function(event) {
+        setTimeout(() => {
+            console.log('post goToPage message');
+            const data = {event: 'goToPage', url: 'https://google.com'};
+            window.parent.postMessage(data, '*');
+        }, 5000);
+    });
+</script>
