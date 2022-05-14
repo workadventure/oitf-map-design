@@ -44,7 +44,7 @@ const toggleDoor = () => {
     }
 }
 
-WA.onInit().then( () => {
+WA.onInit().then( async () => {
     //close the door
     closeDoor();
 
@@ -111,15 +111,40 @@ WA.onInit().then( () => {
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, url);
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PUBLIC, url);
     }
+
+    //Embeded website video
+    const website = await WA.room.website.get("iframeVideoAutiroriumYoutube");
+    if(website != undefined){
+        //define Youtube video in variable
+        if(WA.state.hasVariable('urlVideoAutiroriumYoutube')){
+            website.url = (WA.state.loadVariable('urlVideoAutiroriumYoutube') as string);
+        }
+        //subscribe change
+        WA.state.onVariableChange('urlVideoAutiroriumYoutube').subscribe((data: unknown) => {
+            website.url = (WA.state.loadVariable('urlVideoAutiroriumYoutube') as string);
+        });
+
+        /*focus camera on the video when user enter in the zone
+        WA.room.onEnterLayer('AutiroriumYoutube').subscribe(() => {
+            WA.camera.set(
+                website.x,
+                website.y,
+                website.width,
+                website.height,
+                true,
+                true
+            );
+        });
+        //unfocus camera when user leave the zone
+        WA.room.onLeaveLayer('AutiroriumYoutube').subscribe(() =>{
+            WA.camera.followPlayer();
+        });*/
+    }
 });
 
 const lissenLayer = (layer: string, url: string) => {
     WA.room.onEnterLayer(layer).subscribe(() => {
-        WA.nav.openCoWebSite(
-            /*'https://premium.admin.onceintheflow.com/wa/search/conference_choice/f02d5d65-b78e-41d7-91f5-6c4f6d2e588a'*/
-            'https://workadventure.github.io/oitf-map-design/src/test/test-iframe-message-goToPage.html', 
-            true, 
-            'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; midi;')
+        WA.nav.openCoWebSite(url, true, 'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; midi;')
     });
     WA.room.onLeaveLayer(layer).subscribe(() => WA.nav.closeCoWebSite());
 }
