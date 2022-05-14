@@ -111,12 +111,6 @@ WA.onInit().then( () => {
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, url);
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PUBLIC, url);
     }
-
-    console.log('addEventListener => message', receiveMessage);
-    window.addEventListener("message", (event: MessageEvent) => {
-        console.log('addEventListener => message => event', event);
-        receiveMessage(event);
-    }, false);
 });
 
 const lissenLayer = (layer: string, url: string) => {
@@ -128,14 +122,4 @@ const lissenLayer = (layer: string, url: string) => {
             'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; midi;')
     });
     WA.room.onLeaveLayer(layer).subscribe(() => WA.nav.closeCoWebSite());
-}
-
-const receiveMessage = (event: MessageEvent) => {
-    //if (event.origin !== "http://example.org:8080")  return;
-    console.log('receiveMessage => event', event);
-    const data = event.data;
-    if (data.event === 'access_wa_map') {
-        console.log(data.url);
-        window.location = data.url;
-    }
 }
