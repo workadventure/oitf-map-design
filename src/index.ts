@@ -113,7 +113,7 @@ WA.onInit().then( async () => {
     }
 
     //Embeded website video
-    const website = await WA.room.website.get("iframeVideoVideoAutiroriumYoutube");
+    const website = await WA.room.website.get("iframeVideoAutiroriumYoutube");
     if(website != undefined){
         //define Youtube video in variable
         if(WA.state.hasVariable('urlVideoAutiroriumYoutube')){
@@ -122,6 +122,22 @@ WA.onInit().then( async () => {
         //subscribe change
         WA.state.onVariableChange('urlVideoAutiroriumYoutube').subscribe((data: unknown) => {
             website.url = (WA.state.loadVariable('urlVideoAutiroriumYoutube') as string);
+        });
+
+        //focus camera on the video when user enter in the zone
+        WA.room.onEnterLayer('AutiroriumYoutube').subscribe(() => {
+            WA.camera.set(
+                website.x,
+                website.y,
+                website.width,
+                website.height,
+                true,
+                true
+            );
+        });
+        //unfocus camera when user leave the zone
+        WA.room.onLeaveLayer('AutiroriumYoutube').subscribe(() =>{
+            WA.camera.followPlayer();
         });
     }
 });
