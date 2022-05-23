@@ -124,7 +124,7 @@ WA.onInit().then( async () => {
             website.url = (WA.state.loadVariable('urlVideoAutiroriumYoutube') as string);
         });
 
-        //focus camera on the video when user enter in the zone
+        /*focus camera on the video when user enter in the zone
         WA.room.onEnterLayer('AutiroriumYoutube').subscribe(() => {
             WA.camera.set(
                 website.x,
@@ -138,7 +138,7 @@ WA.onInit().then( async () => {
         //unfocus camera when user leave the zone
         WA.room.onLeaveLayer('AutiroriumYoutube').subscribe(() =>{
             WA.camera.followPlayer();
-        });
+        });*/
     }
 });
 
