@@ -44,7 +44,7 @@ const toggleDoor = () => {
     }
 }
 
-WA.onInit().then( () => {
+WA.onInit().then( async () => {
     //close the door
     closeDoor();
 
@@ -110,6 +110,19 @@ WA.onInit().then( () => {
         lissenLayer(EXIST_TO_EVENT_LAYER, url);
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, url);
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PUBLIC, url);
+    }
+
+    //Embeded website video
+    const website = await WA.room.website.get("iframeVideoVideoAutiroriumYoutube");
+    if(website != undefined){
+        //define Youtube video in variable
+        if(WA.state.hasVariable('urlVideoAutiroriumYoutube')){
+            website.url = (WA.state.loadVariable('urlVideoAutiroriumYoutube') as string);
+        }
+        //subscribe change
+        WA.state.onVariableChange('urlVideoAutiroriumYoutube').subscribe((data: unknown) => {
+            website.url = (WA.state.loadVariable('urlVideoAutiroriumYoutube') as string);
+        });
     }
 });
 
