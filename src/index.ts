@@ -74,22 +74,24 @@ WA.onInit().then( async () => {
         }
     }
     console.log('userDomain', userDomain);
+    console.log('window.location', window.location);
+    console.log('parent.window.location', parent.window.location);
 
     const urlVideo = WA.state.loadVariable('urlVideo');
     if(urlVideo != null){
-        const url = `${userDomain}${urlVideo}/${WA.player.id}?currentUrl=${window.location.href}`;
+        const url = `${userDomain}${urlVideo}/${WA.player.id}?currentUrl=${parent.window.location.href}`;
         lissenLayer(VIDEO_LAYER, url);
     }
 
     const urlDocument = WA.state.loadVariable('urlDocument');
     if(urlDocument != null){
-        const url = `${userDomain}${urlDocument}/${WA.player.id}?currentUrl=${window.location.href}`;
+        const url = `${userDomain}${urlDocument}/${WA.player.id}?currentUrl=${parent.window.location.href}`;
         lissenLayer(DOCUMENT_LAYER, url);
     }
 
     const chapitreChoice = WA.state.loadVariable('chapitreChoice');
     if(chapitreChoice != null){
-        const url = `${userDomain}${chapitreChoice}/${WA.player.id}?currentUrl=${window.location.href}`;
+        const url = `${userDomain}${chapitreChoice}/${WA.player.id}?currentUrl=${parent.window.location.href}`;
         lissenLayer(PANNEAU_LAYER, url);
         lissenLayer(EXIT_CERCLE_TO_CHAPITRE_LAYER_PUBLIC, url);
         lissenLayer(EXIT_CERCLE_TO_CHAPITRE_LAYER_PRIVATE, url);
@@ -98,7 +100,7 @@ WA.onInit().then( async () => {
 
     const projectChoice = WA.state.loadVariable('projectChoice');
     if(projectChoice != null){
-        const url = `${userDomain}${projectChoice}/${WA.player.id}?currentUrl=${window.location.href}`;
+        const url = `${userDomain}${projectChoice}/${WA.player.id}?currentUrl=${parent.window.location.href}`;
         lissenLayer(EXIT_CHAPITRE_TO_CERCLE_LAYER_PUBLIC, url);
         lissenLayer(EXIT_CHAPITRE_TO_CERCLE_LAYER_PRIVATE, url);
         lissenLayer(EXIT_SESSION_TO_CERCLE_LAYER_PRIVATE, url);
@@ -106,7 +108,7 @@ WA.onInit().then( async () => {
 
     const eventChoice = WA.state.loadVariable('eventChoice');
     if(eventChoice != null){
-        const url = `${userDomain}${eventChoice}/${WA.player.id}?currentUrl=${window.location.href}`;
+        const url = `${userDomain}${eventChoice}/${WA.player.id}?currentUrl=${parent.window.location.href}`;
         lissenLayer(EXIST_TO_EVENT_LAYER, url);
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, url);
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PUBLIC, url);
