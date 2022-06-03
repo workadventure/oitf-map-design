@@ -76,6 +76,7 @@ WA.onInit().then( async () => {
     console.log('userDomain', userDomain);
     console.log('window.location', window.location);
     console.log('parent.window.location', parent.window.location);
+    console.log('parent.window.location.href', parent.window.location.href);
 
     const urlVideo = WA.state.loadVariable('urlVideo');
     if(urlVideo != null){
