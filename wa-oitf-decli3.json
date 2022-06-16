@@ -2035,7 +2035,7 @@
                         {
                          "name":"label",
                          "type":"string",
-                         "value":"Lien de la video"
+                         "value":"Lien des vid\u00e9os de l'utilisateur"
                         }, 
                         {
                          "name":"persist",
@@ -2134,7 +2134,7 @@
                         {
                          "name":"label",
                          "type":"string",
-                         "value":"Lien des chapitre des utilisateurs"
+                         "value":"Lien des chapitres des utilisateurs"
                         }, 
                         {
                          "name":"persist",
@@ -2599,7 +2599,7 @@
          "value":"script.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.8.4",
+ "tiledversion":"1.8.6",
  "tileheight":32,
  "tilesets":[
         {

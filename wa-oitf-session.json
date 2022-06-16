@@ -1683,12 +1683,12 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/wa\/search\/videos"
+                         "value":"\/wa\/search\/project\/videos"
                         }, 
                         {
                          "name":"label",
                          "type":"string",
-                         "value":"Lien de la video priv\u00e9e"
+                         "value":"Lien des vid\u00e9os de l'utilisateur"
                         }, 
                         {
                          "name":"persist",
@@ -1716,12 +1716,12 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/wa\/search\/documents"
+                         "value":"\/wa\/search\/project\/documents"
                         }, 
                         {
                          "name":"label",
                          "type":"string",
-                         "value":"Lien private biblio"
+                         "value":"Lien de la salle documents"
                         }, 
                         {
                          "name":"persist",
@@ -1815,12 +1815,12 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/wa\/search\/conference_choice"
+                         "value":"\/wa\/redirect_to_company"
                         }, 
                         {
                          "name":"label",
                          "type":"string",
-                         "value":"Lien des chapitre des utilisateurs"
+                         "value":"Lien des chapitres des utilisateurs"
                         }, 
                         {
                          "name":"persist",
@@ -2197,7 +2197,7 @@
          "value":"script.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.8.4",
+ "tiledversion":"1.8.6",
  "tileheight":32,
  "tilesets":[
         {
