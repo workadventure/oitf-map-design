@@ -1782,7 +1782,7 @@
                         {
                          "name":"default",
                          "type":"string",
-                         "value":"\/wa\/search\/projects\/wa"
+                         "value":"\/wa\/search\/projects"
                         }, 
                         {
                          "name":"label",
