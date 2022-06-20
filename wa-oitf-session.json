@@ -88,12 +88,7 @@
                          "id":160,
                          "name":"exitPrivate (not used)",
                          "opacity":1,
-                         "properties":[
-                                {
-                                 "name":"exitUrl",
-                                 "type":"string",
-                                 "value":"wa-oitf.json#private"
-                                }],
+                         "properties":[],
                          "type":"tilelayer",
                          "visible":true,
                          "width":59,
