@@ -249,6 +249,11 @@
                                  "name":"jitsiRoom",
                                  "type":"string",
                                  "value":"Visio"
+                                }, 
+                                {
+                                 "name":"jitsiRoomAdminTag",
+                                 "type":"string",
+                                 "value":"admin"
                                 }],
                          "type":"tilelayer",
                          "visible":true,
@@ -303,6 +308,11 @@
                                  "name":"jitsiRoom",
                                  "type":"string",
                                  "value":"Auditorium"
+                                }, 
+                                {
+                                 "name":"jitsiRoomAdminTag",
+                                 "type":"string",
+                                 "value":"admin"
                                 }],
                          "type":"tilelayer",
                          "visible":true,
@@ -357,6 +367,11 @@
                                  "name":"jitsiRoom",
                                  "type":"string",
                                  "value":"VisioPrive2"
+                                }, 
+                                {
+                                 "name":"jitsiRoomAdminTag",
+                                 "type":"string",
+                                 "value":"admin"
                                 }],
                          "type":"tilelayer",
                          "visible":true,
@@ -411,6 +426,11 @@
                                  "name":"jitsiRoom",
                                  "type":"string",
                                  "value":"VisioPrive1"
+                                }, 
+                                {
+                                 "name":"jitsiRoomAdminTag",
+                                 "type":"string",
+                                 "value":"admin"
                                 }],
                          "type":"tilelayer",
                          "visible":true,

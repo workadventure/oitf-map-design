@@ -196,6 +196,22 @@
                          "id":159,
                          "name":"Auditorium",
                          "opacity":1,
+                         "properties":[
+                                {
+                                 "name":"jitsiInterfaceConfig",
+                                 "type":"string",
+                                 "value":"{ \"DEFAULT_BACKGROUND\": \"#87643c\" }"
+                                }, 
+                                {
+                                 "name":"jitsiRoom",
+                                 "type":"string",
+                                 "value":"Auditorium"
+                                }, 
+                                {
+                                 "name":"jitsiRoomAdminTag",
+                                 "type":"string",
+                                 "value":"admin"
+                                }],
                          "type":"tilelayer",
                          "visible":true,
                          "width":120,

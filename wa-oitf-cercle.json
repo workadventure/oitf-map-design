@@ -470,6 +470,11 @@
                                  "name":"jitsiRoom",
                                  "type":"string",
                                  "value":"jitsiPublic1"
+                                }, 
+                                {
+                                 "name":"jitsiRoomAdminTag",
+                                 "type":"string",
+                                 "value":"admin"
                                 }],
                          "type":"tilelayer",
                          "visible":true,
@@ -519,6 +524,11 @@
                                  "name":"jitsiRoom",
                                  "type":"string",
                                  "value":"jitsiPublic2"
+                                }, 
+                                {
+                                 "name":"jitsiRoomAdminTag",
+                                 "type":"string",
+                                 "value":"admin"
                                 }],
                          "type":"tilelayer",
                          "visible":true,
@@ -568,6 +578,11 @@
                                  "name":"jitsiRoom",
                                  "type":"string",
                                  "value":"jitsiPublicAuditorium"
+                                }, 
+                                {
+                                 "name":"jitsiRoomAdminTag",
+                                 "type":"string",
+                                 "value":"admin"
                                 }],
                          "type":"tilelayer",
                          "visible":true,
@@ -617,6 +632,11 @@
                                  "name":"jitsiRoom",
                                  "type":"string",
                                  "value":"jitsiPrivate1"
+                                }, 
+                                {
+                                 "name":"jitsiRoomAdminTag",
+                                 "type":"string",
+                                 "value":"admin"
                                 }],
                          "type":"tilelayer",
                          "visible":true,
