@@ -1,9 +1,7 @@
 /// <reference path="../node_modules/@workadventure/iframe-api-typings/iframe_api.d.ts" />
+import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
-import {bootstrapExtra} from "@workadventure/scripting-api-extra";
-
-// The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure.
-bootstrapExtra().catch(e => console.error(e));
+console.log('Script started successfully');
 
 const VIDEO_LAYER = 'Video';
 const DOCUMENT_LAYER = 'Document';
@@ -18,76 +16,57 @@ const EXIT_SESSION_TO_CERCLE_LAYER_PRIVATE = 'openWebsitEexitSessionToCerclePriv
 const EXIT_SESSION_TO_CHAPITRE_LAYER_PRIVATE = 'openWebsitEexitSessionToChapitrePrivate';
 const EXIST_TO_EVENT_LAYER = 'openWebsiteExitToEvent';
 
-/* #Manage premium door */
-
+/* Manage premium door */
 const DOOR_CLOSED_LAYER_NAME = 'doorClosed';
 const DOOR_OPENED_LAYER_NAME = 'doorOpened';
 
-const closeDoor = () => {
-    WA.room.showLayer(DOOR_CLOSED_LAYER_NAME);
-    WA.room.hideLayer(DOOR_OPENED_LAYER_NAME);
-}
-const openDoor = () => {
-    WA.room.hideLayer(DOOR_CLOSED_LAYER_NAME);
-    WA.room.showLayer(DOOR_OPENED_LAYER_NAME);
-}
-const isPremium = () => {
-    return WA.player.tags.includes('premium') || WA.player.tags.includes('Premium') 
-    || WA.player.tags.includes('PREMIUM') || WA.player.tags.includes('editor');
-}
-const toggleDoor = () => {
-    console.log('isPremium()', isPremium());
-    if(isPremium()){
-        openDoor();
-    }else{
-        closeDoor();
-    }
-}
+// Waiting for the API to be ready
+WA.onInit().then(async () => {
+    console.log('Scripting API ready');
+    console.log('Player tags: ', WA.player.tags)
 
-WA.onInit().then( async () => {
     //close the door
     closeDoor();
 
     //subscribe to open the door if user is premium
     WA.room.onEnterLayer('doorZone').subscribe(toggleDoor);
 
-
     console.info('Init WA OITF');
 
     //define the domain
     let userDomain: string = '';
-    if(WA.state.hasVariable('domain')){
+    if (WA.state.hasVariable('domain')) {
         userDomain = (WA.state.loadVariable('domain') as string);
     }
-    
+
     WA.player.tags.forEach((e: string) => {
         console.log(e);
-        if(e.match(/http(?:s)?:\/\/(?:[\w-]+\.)*([\w-]{1,63})(?:\.(?:\w{3}|\w{2,10}))(?:$|\/)/i) != null){
+        if (e.match(/http(?:s)?:\/\/(?:[\w-]+\.)*([\w-]{1,63})(?:\.(?:\w{3}|\w{2,10}))(?:$|\/)/i) != null) {
             userDomain = e;
         }
     });
 
-    if(userDomain !== ''){
+    if (userDomain !== '') {
         //delete '/' caractere if exist
-        if(userDomain.substring(userDomain.length -1, userDomain.length -1) === '/'){
-            userDomain = userDomain.substring(0, userDomain.length -1);
+        if (userDomain.substring(userDomain.length - 1, userDomain.length - 1) === '/') {
+            userDomain = userDomain.substring(0, userDomain.length - 1);
         }
     }
 
     const urlVideo = WA.state.loadVariable('urlVideo');
-    if(urlVideo != null){
+    if (urlVideo != null) {
         const url = `${userDomain}${urlVideo}/${WA.player.id}?currentUrl=${WA.room.id}`;
         lissenLayer(VIDEO_LAYER, url);
     }
 
     const urlDocument = WA.state.loadVariable('urlDocument');
-    if(urlDocument != null){
+    if (urlDocument != null) {
         const url = `${userDomain}${urlDocument}/${WA.player.id}?currentUrl=${WA.room.id}`;
         lissenLayer(DOCUMENT_LAYER, url);
     }
 
     const chapitreChoice = WA.state.loadVariable('chapitreChoice');
-    if(chapitreChoice != null){
+    if (chapitreChoice != null) {
         const url = `${userDomain}${chapitreChoice}/${WA.player.id}?currentUrl=${WA.room.id}`;
         lissenLayer(PANNEAU_LAYER, url);
         lissenLayer(EXIT_CERCLE_TO_CHAPITRE_LAYER_PUBLIC, url);
@@ -96,7 +75,7 @@ WA.onInit().then( async () => {
     }
 
     const projectChoice = WA.state.loadVariable('projectChoice');
-    if(projectChoice != null){
+    if (projectChoice != null) {
         const url = `${userDomain}${projectChoice}/${WA.player.id}?currentUrl=${WA.room.id}`;
         lissenLayer(EXIT_CHAPITRE_TO_CERCLE_LAYER_PUBLIC, url);
         lissenLayer(EXIT_CHAPITRE_TO_CERCLE_LAYER_PRIVATE, url);
@@ -104,7 +83,7 @@ WA.onInit().then( async () => {
     }
 
     const eventChoice = WA.state.loadVariable('eventChoice');
-    if(eventChoice != null){
+    if (eventChoice != null) {
         const url = `${userDomain}${eventChoice}/${WA.player.id}?currentUrl=${WA.room.id}`;
         lissenLayer(EXIST_TO_EVENT_LAYER, url);
         lissenLayer(EXIT_CERCLE_TO_SESSION_LAYER_PRIVATE, url);
@@ -113,9 +92,9 @@ WA.onInit().then( async () => {
 
     //Embeded website video
     const website = await WA.room.website.get("iframeVideoAutiroriumYoutube");
-    if(website != undefined){
+    if (website != undefined) {
         //define Youtube video in variable
-        if(WA.state.hasVariable('urlVideoAutiroriumYoutube')){
+        if (WA.state.hasVariable('urlVideoAutiroriumYoutube')) {
             website.url = (WA.state.loadVariable('urlVideoAutiroriumYoutube') as string);
         }
         //subscribe change
@@ -139,7 +118,33 @@ WA.onInit().then( async () => {
             WA.camera.followPlayer();
         });*/
     }
-});
+
+    // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
+    bootstrapExtra().then(() => {
+        console.log('Scripting API Extra ready');
+    }).catch(e => console.error(e));
+}).catch(e => console.error(e));
+
+const closeDoor = () => {
+    WA.room.showLayer(DOOR_CLOSED_LAYER_NAME);
+    WA.room.hideLayer(DOOR_OPENED_LAYER_NAME);
+}
+const openDoor = () => {
+    WA.room.hideLayer(DOOR_CLOSED_LAYER_NAME);
+    WA.room.showLayer(DOOR_OPENED_LAYER_NAME);
+}
+const isPremium = () => {
+    return WA.player.tags.includes('premium') || WA.player.tags.includes('Premium')
+        || WA.player.tags.includes('PREMIUM') || WA.player.tags.includes('editor');
+}
+const toggleDoor = () => {
+    console.log('isPremium()', isPremium());
+    if (isPremium()) {
+        openDoor();
+    } else {
+        closeDoor();
+    }
+}
 
 const lissenLayer = (layer: string, url: string) => {
     WA.room.onEnterLayer(layer).subscribe(() => {

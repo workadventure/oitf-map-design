@@ -2596,7 +2596,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"script.js"
+         "value":"src/main.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.8.4",
@@ -2605,7 +2605,7 @@
         {
          "columns":6,
          "firstgid":1,
-         "image":"src\/assets\/Special_Zones.png",
+         "image":"tilesets\/Special_Zones.png",
          "imageheight":64,
          "imagewidth":192,
          "margin":0,
@@ -2634,7 +2634,7 @@
         {
          "columns":16,
          "firstgid":13,
-         "image":"src\/assets\/modern\/LimeZu_1_Generic_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_1_Generic_32x32.png",
          "imageheight":1920,
          "imagewidth":512,
          "margin":0,
@@ -2647,7 +2647,7 @@
         {
          "columns":16,
          "firstgid":973,
-         "image":"src\/assets\/modern\/LimeZu_2_LivingRoom_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_2_LivingRoom_32x32.png",
          "imageheight":1440,
          "imagewidth":512,
          "margin":0,
@@ -2660,7 +2660,7 @@
         {
          "columns":16,
          "firstgid":1693,
-         "image":"src\/assets\/modern\/LimeZu_3_Bathroom_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_3_Bathroom_32x32.png",
          "imageheight":1792,
          "imagewidth":512,
          "margin":0,
@@ -2673,7 +2673,7 @@
         {
          "columns":16,
          "firstgid":2589,
-         "image":"src\/assets\/modern\/LimeZu_5_Classroom_and_library_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_5_Classroom_and_library_32x32.png",
          "imageheight":1088,
          "imagewidth":512,
          "margin":0,
@@ -2686,7 +2686,7 @@
         {
          "columns":16,
          "firstgid":3133,
-         "image":"src\/assets\/modern\/LimeZu_6_Music_and_sport_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_6_Music_and_sport_32x32.png",
          "imageheight":928,
          "imagewidth":512,
          "margin":0,
@@ -2699,7 +2699,7 @@
         {
          "columns":16,
          "firstgid":3597,
-         "image":"src\/assets\/modern\/LimeZu_12_Kitchen_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_12_Kitchen_32x32.png",
          "imageheight":1568,
          "imagewidth":512,
          "margin":0,
@@ -2712,7 +2712,7 @@
         {
          "columns":16,
          "firstgid":4381,
-         "image":"src\/assets\/modern\/LimeZu_13_Conference_Hall_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_13_Conference_Hall_32x32.png",
          "imageheight":384,
          "imagewidth":512,
          "margin":0,
@@ -2725,7 +2725,7 @@
         {
          "columns":16,
          "firstgid":4573,
-         "image":"src\/assets\/modern\/LimeZu_16_Grocery_store_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_16_Grocery_store_32x32.png",
          "imageheight":2496,
          "imagewidth":512,
          "margin":0,
@@ -2738,7 +2738,7 @@
         {
          "columns":16,
          "firstgid":5821,
-         "image":"src\/assets\/modern\/LimeZu_14_Basement_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_14_Basement_32x32.png",
          "imageheight":1600,
          "imagewidth":512,
          "margin":0,
@@ -2751,7 +2751,7 @@
         {
          "columns":16,
          "firstgid":6621,
-         "image":"src\/assets\/modern\/LimeZu_17_Visibile_Upstairs_System_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_17_Visibile_Upstairs_System_32x32.png",
          "imageheight":864,
          "imagewidth":512,
          "margin":0,
@@ -2764,7 +2764,7 @@
         {
          "columns":16,
          "firstgid":7053,
-         "image":"src\/assets\/modern\/LimeZu_18_Jail_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_18_Jail_32x32.png",
          "imageheight":1440,
          "imagewidth":512,
          "margin":0,
@@ -2777,7 +2777,7 @@
         {
          "columns":16,
          "firstgid":7773,
-         "image":"src\/assets\/modern\/LimeZu_19_Hospital_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_19_Hospital_32x32.png",
          "imageheight":3520,
          "imagewidth":512,
          "margin":0,
@@ -2790,7 +2790,7 @@
         {
          "columns":16,
          "firstgid":9533,
-         "image":"src\/assets\/modern\/LimeZu_22_Museum_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_22_Museum_32x32.png",
          "imageheight":1152,
          "imagewidth":512,
          "margin":0,
@@ -2803,7 +2803,7 @@
         {
          "columns":75,
          "firstgid":10109,
-         "image":"src\/assets\/modern\/LimeZu_23_Room_Builder_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_23_Room_Builder_32x32.png",
          "imageheight":2144,
          "imagewidth":2400,
          "margin":0,
@@ -2816,7 +2816,7 @@
         {
          "columns":22,
          "firstgid":15134,
-         "image":"src\/assets\/modern\/LimeZu_24_Office_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_24_Office_32x32.png",
          "imageheight":768,
          "imagewidth":704,
          "margin":0,
@@ -2829,7 +2829,7 @@
         {
          "columns":18,
          "firstgid":15662,
-         "image":"src\/assets\/modern\/LimeZu_24_User_Interface_32x32.png",
+         "image":"tilesets\/modern\/LimeZu_24_User_Interface_32x32.png",
          "imageheight":448,
          "imagewidth":576,
          "margin":0,
@@ -2871,7 +2871,7 @@
         {
          "columns":11,
          "firstgid":15914,
-         "image":"src\/assets\/modern\/Tv_Studio_Design_layer_2_32x32.png",
+         "image":"tilesets\/modern\/Tv_Studio_Design_layer_2_32x32.png",
          "imageheight":320,
          "imagewidth":352,
          "margin":0,
@@ -2884,7 +2884,7 @@
         {
          "columns":16,
          "firstgid":16024,
-         "image":"src\/assets\/modern\/Modern_Office_Black_Shadow_32x32.png",
+         "image":"tilesets\/modern\/Modern_Office_Black_Shadow_32x32.png",
          "imageheight":1696,
          "imagewidth":512,
          "margin":0,
@@ -2897,7 +2897,7 @@
         {
          "columns":8,
          "firstgid":16872,
-         "image":"src\/assets\/fantasy_1.png",
+         "image":"tilesets\/fantasy_1.png",
          "imageheight":2112,
          "imagewidth":256,
          "margin":0,
@@ -2910,7 +2910,7 @@
         {
          "columns":21,
          "firstgid":17400,
-         "image":"src\/assets\/terrain.png",
+         "image":"tilesets\/terrain.png",
          "imageheight":736,
          "imagewidth":672,
          "margin":0,
@@ -3112,7 +3112,7 @@
         {
          "columns":16,
          "firstgid":17883,
-         "image":"src\/assets\/modern\/8_Gym_Shadowless_32x32.png",
+         "image":"tilesets\/modern\/8_Gym_Shadowless_32x32.png",
          "imageheight":1056,
          "imagewidth":512,
          "margin":0,
@@ -3126,7 +3126,7 @@
         {
          "columns":32,
          "firstgid":18411,
-         "image":"src\/assets\/modern\/LPC-terrains-subimissions-outside.png",
+         "image":"tilesets\/modern\/LPC-terrains-subimissions-outside.png",
          "imageheight":1024,
          "imagewidth":1024,
          "margin":0,
@@ -3140,7 +3140,7 @@
         {
          "columns":32,
          "firstgid":19435,
-         "image":"src\/assets\/modern\/LPC-terrains-subimissions-outside.png",
+         "image":"tilesets\/modern\/LPC-terrains-subimissions-outside.png",
          "imageheight":1024,
          "imagewidth":1024,
          "margin":0,
@@ -3154,7 +3154,7 @@
         {
          "columns":22,
          "firstgid":20459,
-         "image":"src\/assets\/medieval\/Floor.png",
+         "image":"tilesets\/medieval\/Floor.png",
          "imageheight":512,
          "imagewidth":704,
          "margin":0,
@@ -3408,7 +3408,7 @@
         {
          "columns":48,
          "firstgid":20811,
-         "image":"src\/assets\/medieval\/Water.png",
+         "image":"tilesets\/medieval\/Water.png",
          "imageheight":672,
          "imagewidth":1536,
          "margin":0,
@@ -3697,7 +3697,7 @@
         {
          "columns":72,
          "firstgid":21819,
-         "image":"src\/animations\/ANIMATIONS.png",
+         "image":"tilesets\/animations\/ANIMATIONS.png",
          "imageheight":480,
          "imagewidth":2304,
          "margin":0,
@@ -6913,7 +6913,7 @@
         {
          "columns":16,
          "firstgid":22899,
-         "image":"src\/assets\/modern\/9_Fishing_32x32.png",
+         "image":"tilesets\/modern\/9_Fishing_32x32.png",
          "imageheight":864,
          "imagewidth":512,
          "margin":0,
@@ -6927,7 +6927,7 @@
         {
          "columns":14,
          "firstgid":23331,
-         "image":"src\/assets\/modern\/work_adventure_tilesets.png",
+         "image":"tilesets\/modern\/work_adventure_tilesets.png",
          "imageheight":1408,
          "imagewidth":448,
          "margin":0,
@@ -6941,7 +6941,7 @@
         {
          "columns":32,
          "firstgid":23947,
-         "image":"src\/CustomTileset.png",
+         "image":"tilesets\/CustomTileset.png",
          "imageheight":1024,
          "imagewidth":1024,
          "margin":0,
@@ -6955,7 +6955,7 @@
         {
          "columns":57,
          "firstgid":24971,
-         "image":"src\/animations\/ANIMATIONS2.png",
+         "image":"tilesets\/animations\/ANIMATIONS2.png",
          "imageheight":448,
          "imagewidth":1824,
          "margin":0,
@@ -9786,7 +9786,7 @@
         {
          "columns":1,
          "firstgid":25769,
-         "image":"src\/easter.png",
+         "image":"tilesets\/easter.png",
          "imageheight":64,
          "imagewidth":32,
          "margin":0,
@@ -9800,7 +9800,7 @@
         {
          "columns":24,
          "firstgid":25771,
-         "image":"src\/assets\/medieval\/Trees and flowers.png",
+         "image":"tilesets\/medieval\/Trees and flowers.png",
          "imageheight":768,
          "imagewidth":768,
          "margin":0,
@@ -9814,7 +9814,7 @@
         {
          "columns":23,
          "firstgid":26347,
-         "image":"src\/assets\/modern\/LimeZu_Exteriors_Misc.png",
+         "image":"tilesets\/modern\/LimeZu_Exteriors_Misc.png",
          "imageheight":1984,
          "imagewidth":736,
          "margin":0,
@@ -9828,7 +9828,7 @@
         {
          "columns":16,
          "firstgid":27773,
-         "image":"src\/animations\/Drinking_Fountain_2_loop_3-6_32x32.png",
+         "image":"tilesets\/animations\/Drinking_Fountain_2_loop_3-6_32x32.png",
          "imageheight":96,
          "imagewidth":512,
          "margin":0,
@@ -10059,7 +10059,7 @@
         {
          "columns":6,
          "firstgid":27821,
-         "image":"src\/animations\/Pigeon_32x32.png",
+         "image":"tilesets\/animations\/Pigeon_32x32.png",
          "imageheight":32,
          "imagewidth":192,
          "margin":0,
@@ -10102,7 +10102,7 @@
         {
          "columns":20,
          "firstgid":27827,
-         "image":"src\/animations\/Street_Lamp_2_32x32.png",
+         "image":"tilesets\/animations\/Street_Lamp_2_32x32.png",
          "imageheight":160,
          "imagewidth":640,
          "margin":0,
@@ -10617,7 +10617,7 @@
         {
          "columns":66,
          "firstgid":27927,
-         "image":"src\/animations\/Windows.png",
+         "image":"tilesets\/animations\/Windows.png",
          "imageheight":1536,
          "imagewidth":2112,
          "margin":0,
@@ -10872,7 +10872,7 @@
         {
          "columns":32,
          "firstgid":31095,
-         "image":"src\/Lights.png",
+         "image":"tilesets\/Lights.png",
          "imageheight":1024,
          "imagewidth":1024,
          "margin":0,
@@ -10886,7 +10886,7 @@
         {
          "columns":3,
          "firstgid":32119,
-         "image":"src\/Unlock.png",
+         "image":"tilesets\/Unlock.png",
          "imageheight":65,
          "imagewidth":96,
          "margin":0,
@@ -10899,7 +10899,7 @@
         {
          "columns":3,
          "firstgid":32125,
-         "image":"src\/Lock.png",
+         "image":"tilesets\/Lock.png",
          "imageheight":64,
          "imagewidth":96,
          "margin":0,
