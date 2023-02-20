@@ -98,7 +98,7 @@ WA.onInit().then(async () => {
             website.url = (WA.state.loadVariable('urlVideoAutiroriumYoutube') as string);
         }
         //subscribe change
-        WA.state.onVariableChange('urlVideoAutiroriumYoutube').subscribe((data: unknown) => {
+        WA.state.onVariableChange('urlVideoAutiroriumYoutube').subscribe(() => {
             website.url = (WA.state.loadVariable('urlVideoAutiroriumYoutube') as string);
         });
 
