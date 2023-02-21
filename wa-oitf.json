@@ -309,6 +309,11 @@
                                  "name":"jitsiRoomAdminTag",
                                  "type":"string",
                                  "value":"admin"
+                                }, 
+                                {
+                                 "name":"jitsiTrigger",
+                                 "type":"string",
+                                 "value":"onaction"
                                 }],
                          "type":"tilelayer",
                          "visible":true,
