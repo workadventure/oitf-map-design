@@ -143,13 +143,11 @@ const listenDoor = (layer: string) => {
 }
 
 const openDoor = (layer: string) => {
-    console.log('open door', layer)
     WA.room.hideLayer(layer + "Closed")
     WA.room.showLayer(layer + "Open")
 }
 
 const closeDoor = (layer: string) => {
-    console.log('close door', layer)
     WA.room.hideLayer(layer + "Open")
     WA.room.showLayer(layer + "Closed")
 }
