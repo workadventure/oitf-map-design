@@ -6,6 +6,18 @@ This is a starter kit to help you build your own map for [WorkAdventure](https:/
 
 To understand how to use this starter kit, follow the tutorial at [https://workadventu.re/map-building](https://workadventu.re/map-building).
 
+## OITF Admin maps naming
+
+
+- RDC / Carte 1: wa-oitf.json
+- RDC / Carte 2: wa-oitf-decli1.json
+- RDC / Carte 3: wa-oitf-decli2.json
+- RDC / Carte 4: wa-oitf-decli3.json
+- RDC / Carte 5: wa-oitf-decli4.json
+- 1er étage / Cercle: wa-oitf-cercle.json
+
+The rest of the maps are not being used at the moment.
+
 ## Structure
 * *map.(json/tmj)*: Map file
 * *map.png*: The map thumbnail displayed on the in-game map information
