@@ -2709,24 +2709,19 @@
          "value":"Copyright for Workadventu.re and SportAlliance"
         }, 
         {
-         "name":"mapDescription",
-         "type":"string",
-         "value":"Sportalliance building, meeting room and workspace"
-        }, 
-        {
          "name":"mapImage",
          "type":"string",
-         "value":"wa-sportalliance.png"
+         "value":"wa-oitf-decli3.png"
         }, 
         {
          "name":"mapLink",
          "type":"string",
-         "value":"https:\/\/thecodingmachine.github.io\/workadventure-map-starter-kit\/map.json"
+         "value":"https:\/\/github.com\/workadventure\/oitf-map-design\/wa-oitf-decli3.json"
         }, 
         {
          "name":"mapName",
          "type":"string",
-         "value":"Main Floor"
+         "value":"OITF RDC"
         }, 
         {
          "name":"script",
