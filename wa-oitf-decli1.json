@@ -2378,28 +2378,6 @@
                  "y":260
                 }, 
                 {
-                 "class":"website",
-                 "height":89,
-                 "id":22,
-                 "name":"iframeVideoAuditoriumYoutube",
-                 "properties":[
-                        {
-                         "name":"allowApi",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"url",
-                         "type":"string",
-                         "value":"https:\/\/www.youtube.com\/embed\/RpLdTgAwPoQ"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":155,
-                 "x":2405,
-                 "y":0
-                }, 
-                {
                  "class":"area",
                  "height":348,
                  "id":24,

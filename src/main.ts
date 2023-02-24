@@ -102,19 +102,6 @@ WA.onInit().then(async () => {
         listenLayer(EXIT_CERCLE_TO_SESSION_PUBLIC, url)
     }
 
-    // Embeded website video
-    const website = await WA.room.website.get("iframeVideoAuditoriumYoutube")
-    if (website != undefined) {
-        // define Youtube video in variable
-        if (WA.state.hasVariable('urlVideoAuditoriumYoutube')) {
-            website.url = (WA.state.loadVariable('urlVideoAuditoriumYoutube') as string)
-        }
-        //subscribe change
-        WA.state.onVariableChange('urlVideoAuditoriumYoutube').subscribe(() => {
-            website.url = (WA.state.loadVariable('urlVideoAuditoriumYoutube') as string)
-        })
-    }
-
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready')
