@@ -1,4 +1,5 @@
 /// <reference path="../node_modules/@workadventure/iframe-api-typings/iframe_api.d.ts" />
+import { ActionMessage } from "@workadventure/iframe-api-typings"
 import { bootstrapExtra } from "@workadventure/scripting-api-extra"
 
 console.log('Script started successfully')
@@ -27,7 +28,7 @@ const EXIT_SESSION_TO_CHAPITRE_PRIVATE = 'SessionToChapitrePrivate'
 
 // Door states wording
 const PREMIUM_DOOR = 'premiumDoor'
-const PUBLIC_DOOR = 'publicDoor'
+const VISIO_DOOR = 'visioDoor'
 const MILAN_DOOR = 'milanDoor'
 const JOHANNESBOURG_DOOR = 'johannesbourgDoor'
 
@@ -37,15 +38,20 @@ WA.onInit().then(async () => {
     console.log('Player tags: ', WA.player.tags)
 
     // Manage the doors
-    closeDoor(PUBLIC_DOOR)
+    if (WA.state.hasVariable('milanURL')) {
+        // only for RDV maps, they all have a milanURL variable
+        closeDoor(VISIO_DOOR)
+        closeDoor(MILAN_DOOR)
+        closeDoor(JOHANNESBOURG_DOOR)
+    }
     closeDoor(PREMIUM_DOOR)
-    closeDoor(MILAN_DOOR)
-    closeDoor(JOHANNESBOURG_DOOR)
-    listenDoor(PUBLIC_DOOR)
     if (isPremium()) {
+        if (WA.state.hasVariable('milanURL')) {
+            listenDoor(VISIO_DOOR)
+            listenDoor(MILAN_DOOR)
+            listenDoor(JOHANNESBOURG_DOOR)
+        }
         listenDoor(PREMIUM_DOOR)
-        listenDoor(MILAN_DOOR)
-        listenDoor(JOHANNESBOURG_DOOR)
     }
 
     // Manage the domain
@@ -109,10 +115,8 @@ WA.onInit().then(async () => {
 }).catch(e => console.error(e))
 
 const isPremium = () => {
-    return WA.player.tags.includes('premium') || WA.player.tags.includes('Premium')
-        || WA.player.tags.includes('PREMIUM') || WA.player.tags.includes('editor')
+    return WA.player.tags.includes('premium') || WA.player.tags.includes('editor')
 }
-
 const listenLayer = (layer: string, url: string) => {
     WA.room.onEnterLayer(layer).subscribe(() => {
         WA.nav.openCoWebSite(url, true, 'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; midi; camera; microphone;')
@@ -120,21 +124,36 @@ const listenLayer = (layer: string, url: string) => {
     WA.room.onLeaveLayer(layer).subscribe(() => WA.nav.closeCoWebSite())
 }
 
-const listenDoor = (layer: string) => {
-    WA.room.area.onEnter(layer).subscribe(() => {
-        openDoor(layer)
+const listenDoor = (door: string) => {
+    let doorMessage: ActionMessage
+
+    WA.room.area.onEnter(door).subscribe(() => {
+        if (WA.state.loadVariable(door)) {
+            doorMessage = WA.ui.displayActionMessage({
+                message: "Press SPACE or touch here to Close the door",
+                callback: () => {
+                    closeDoor(door)
+                }
+            });
+        } else {
+            doorMessage = WA.ui.displayActionMessage({
+                message: "Press SPACE or touch here to Open the door",
+                callback: () => {
+                    openDoor(door)
+                }
+            });
+        }
     })
-    WA.room.area.onLeave(layer).subscribe(() => {
-        closeDoor(layer)
+
+    WA.room.area.onLeave(door).subscribe(() => {
+        doorMessage.remove()
     })
 }
 
-const openDoor = (layer: string) => {
-    WA.room.hideLayer(layer + "Closed")
-    WA.room.showLayer(layer + "Open")
+const openDoor = (door: string) => {
+    WA.state.saveVariable(door, true)
 }
 
-const closeDoor = (layer: string) => {
-    WA.room.hideLayer(layer + "Open")
-    WA.room.showLayer(layer + "Closed")
+const closeDoor = (door: string) => {
+    WA.state.saveVariable(door, false)
 }

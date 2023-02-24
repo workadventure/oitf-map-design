@@ -312,12 +312,7 @@
                                 {
                                  "name":"jitsiRoomAdminTag",
                                  "type":"string",
-                                 "value":"admin"
-                                }, 
-                                {
-                                 "name":"jitsiTrigger",
-                                 "type":"string",
-                                 "value":"onaction"
+                                 "value":"premium"
                                 }],
                          "type":"tilelayer",
                          "visible":true,
@@ -1688,11 +1683,6 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -1721,11 +1711,6 @@
                          "name":"persist",
                          "type":"bool",
                          "value":true
-                        }, 
-                        {
-                         "name":"writableBy",
-                         "type":"string",
-                         "value":"admin"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -1758,7 +1743,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"editor"
+                         "value":"premium"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -1791,7 +1776,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"editor"
+                         "value":"premium"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -1824,7 +1809,7 @@
                         {
                          "name":"writableBy",
                          "type":"string",
-                         "value":"editor"
+                         "value":"premium"
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -1838,7 +1823,7 @@
                 {
                  "name":"tag",
                  "type":"string",
-                 "value":"editor"
+                 "value":"premium"
                 }],
          "type":"objectgroup",
          "visible":true,
