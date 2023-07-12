@@ -119,7 +119,7 @@ const isPremium = () => {
 }
 const listenLayer = (layer: string, url: string) => {
     WA.room.onEnterLayer(layer).subscribe(() => {
-        WA.nav.openCoWebSite(url, true, 'fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; midi; camera; microphone;')
+        WA.nav.openCoWebSite(url, true, 'fullscreen; display-capture; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; midi; camera; microphone;')
     })
     WA.room.onLeaveLayer(layer).subscribe(() => WA.nav.closeCoWebSite())
 }
