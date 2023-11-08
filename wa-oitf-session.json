@@ -2173,10 +2173,10 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src/main.ts"
+         "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.8.4",
+ "tiledversion":"1.10.2",
  "tileheight":32,
  "tilesets":[
         {
@@ -4052,7 +4052,8 @@
                         {
                          "duration":100,
                          "tileid":534
-                        }, 
+                        },
+                    
                         {
                          "duration":100,
                          "tileid":537
@@ -4344,7 +4345,8 @@
                         {
                          "duration":100,
                          "tileid":535
-                        }, 
+                        },
+                    
                         {
                          "duration":100,
                          "tileid":538
@@ -4636,7 +4638,8 @@
                         {
                          "duration":100,
                          "tileid":536
-                        }, 
+                        },
+                    
                         {
                          "duration":100,
                          "tileid":539
@@ -4928,7 +4931,8 @@
                         {
                          "duration":100,
                          "tileid":606
-                        }, 
+                        },
+                    
                         {
                          "duration":100,
                          "tileid":609
@@ -5220,7 +5224,8 @@
                         {
                          "duration":100,
                          "tileid":607
-                        }, 
+                        },
+                    
                         {
                          "duration":100,
                          "tileid":610
@@ -5512,7 +5517,8 @@
                         {
                          "duration":100,
                          "tileid":608
-                        }, 
+                        },
+                    
                         {
                          "duration":100,
                          "tileid":611
@@ -10468,9 +10474,32 @@
          "tilecount":6,
          "tileheight":32,
          "tilewidth":32
+        }, 
+        {
+         "columns":6,
+         "firstgid":32131,
+         "image":"..\/wa-eiffage\/tilesets\/WA_Special_Zones.png",
+         "imageheight":64,
+         "imagewidth":192,
+         "margin":0,
+         "name":"WA_Special_Zones",
+         "spacing":0,
+         "tilecount":12,
+         "tileheight":32,
+         "tiles":[
+                {
+                 "id":2,
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":true
+                        }]
+                }],
+         "tilewidth":32
         }],
  "tilewidth":32,
  "type":"map",
- "version":"1.8",
+ "version":"1.10",
  "width":59
 }
