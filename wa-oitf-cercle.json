@@ -1093,17 +1093,6 @@
          "id":158,
          "name":"Document",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ urlDocument }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":103,
@@ -1147,17 +1136,6 @@
          "id":159,
          "name":"Video",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"{{{ domain }}}{{{ urlVideo }}}"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":103,
