@@ -10,6 +10,7 @@ export default defineConfig({
                 ...getMapsScripts(),
             },
         },
+        sourcemap: true,
     },
     plugins: [...getMapsOptimizers()],
     server: {
